@@ -77,9 +77,8 @@
    emacs-cfrs))
 
 (define %jtx/bashrc "
-source /gnu/store/krf43gjpnrw05vrkaqa6c3h56rqwzjnh-liquidprompt-2.1.2/share/liquidprompt/liquidprompt
-#source /gnu/store/dzn7mlkkxwjpl6jj2f6lrk4bx2fji0nc-liquidprompt-2.1.2/share/liquidprompt/themes/powerline/powerline.theme
-neofetch
+PROMPT_COMMAND='PS1_CMD1=$(__git_ps1 " (%s)")'; PS1='\[\e[38;5;255;48;5;21m\]\t\[\e[104m\]>\[\e[0;48;5;247m\]\H\[\e[48;5;248m\]>\[\e[48;5;19m\]\u>\[\e[48;5;88m\]${PS1_CMD1}\[\e[48;5;28;1m\]\\$\[\e[0m\]'
+fastfetch
 ")
 
 (home-environment
@@ -97,7 +96,7 @@ neofetch
 	   usbredir
 	   exa
 	   bat
-	   liquidprompt
+	   fastfetch
 	   font-tamzen
 	   pavucontrol
 	   wireplumber
